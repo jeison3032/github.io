@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECICLAJE INSTITUCIONAL</title>
+ 
+<link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+
+    <style>
+
+ body {
+      margin: 0;
+      padding: 0;
+      font-family: "Times New Roman", Times, serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      
+      font-family: "Times New Roman", Times, serif;
+      background-color: #f5f5f5; /* Fondo gris claro */
+      margin: 0;
+      padding: 0;
+
+
+/*esto es para la imagen*/
+
+      font-family: "Times New Roman", Times, serif;
+      margin: 0;
+      background-color: #f5f5f5;
+      background-image: url('c:\Users\Equipo\Downloads\reciclage.png'); /* ♻️ símbolo */
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 400px; /* Ajusta el tamaño del símbolo */
+      background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
+  
+      height:100%;
+      margin:0;
+      background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
+      align-items:center;
+      justify-content:center;
+    }
+
+    header, footer {
+      background: #c0392b;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    main {
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    section {
+      height: 800px; /* Para que aparezca la barra de movimiento */
+      background: white;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    header {
+      background-color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .contenedor {
+      width: 800px; /* 👈 Ancho exacto de la página */
+      max-width: 95%; /* Para móviles */
+      margin: 40px auto; /* Centrado */
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+      margin-top: 50px;
+    }
+        
+  /* Fondo semitransparente para dar efecto */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* Ajusta opacidad (0 = transparente, 1 = opaco) */
+    z-index: -1;
+  }
+
+  /* Menú superior */
+  nav {
+    background-color: #27ae60;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* separa izquierda y centro */
+  }
+
+  .menu {
+  position: relative;
+  }
+
+.menu-btn {
+    background-color: white;
+    color: #27ae60;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .menu-btn:hover {
+    background-color: #27ae60;
+    color: white;
+  }
+
+  /* 📜 Contenedor del menú desplegable */
+  .menu {
+    position: relative;
+    display: inline-block;
+  }
+
+  .menu-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  .menu-content a {
+    display: block;
+    color: #27ae60;
+    padding: 12px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+
+  .menu-content a:hover {
+    background-color: #27ae60;
+    color: white;
+  }
+
+  /* 🪄 Mostrar el menú cuando pasas el mouse */
+  .menu:hover .menu-content {
+    display: block;
+  }
+
+    /* 🧾 Texto centrado */
+  .titulo-barra {
+    flex-grow: 1; /* ocupa el centro */
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  /* 📄 Secciones */
+
+  section {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(255,255,255,0.9); /* fondo suave para leer mejor */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+
+
+    .contenido {
+      position: relative;
+      z-index: 1; /* Asegura que el texto quede encima */
+      text-align: center;
+    }
+  
+
+
+    /* 📄 Contenedor principal (márgenes generales) */
+    .contenedor {
+      max-width: 850px;      /* ancho de la “página” */
+      margin: 50px auto;     /* centrado + margen arriba/abajo */
+      padding: 40px;         /* espacio interno alrededor del texto */
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 🏷️ Títulos principales */
+    h1 {
+      font-size: 2.5em;
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #b004ffff;
+    }
+
+    /* 📝 Subtítulos */
+    h2 {
+      font-size: 1.8em;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      color: #00ffc8ff;
+    }
+
+    /* ✨ Títulos pequeños (opcional) */
+    h3 {
+      font-size: 1.4em;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #01ff4dff;
+    }
+
+    /* 📚 Párrafos */
+    p {
+      font-size: 1.1em;  
+      text-align: justify;
+      margin-bottom: 20px;
+      color: #000000ff;
+      line-height: 1.8; /* mejora la lectura */ /* espacio entre líneas */
+    }
+
+    /* 📌 Listas */
+    ul, ol {
+      margin-left: 40px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    /* 📎 Imágenes centradas */
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      border-radius: 5px;
+    }
+  
+ .social-btn {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  margin: 10px;
+  color: white;
+  transition: 0.3s;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+  
+.boton:hover {
+    background: linear-gradient(135deg, #ff6a3d, #ff7096);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transform: scale(1.05);}
+
+    .boton {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: inline-block;
+}
+ 
+</style>
+
+<nav>
+  <div class="menu">
+    <button class="menu-btn">☰ Menú</button>
+    <div class="menu-content">
+      <a href="#inicio">Inicio</a>
+      <a href="#definicion">Definición</a>
+      <a href="#tipos">Tipos</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#importancia">Importancia</a>
+      <a href="#conclusion">Conclusión</a>
+    </div>
+  </div>
+ <div class="titulo-barra">Reciclaje Institucional ♻️</div>
+</nav>
+
+
+    <div class="contenedor">
+    <div class="fondo">
+    <div class="contenido">
+
+    <H1 class="titulo">Bienvenidos a un nueva forma de reciclaje que te puede ayudar a mejorar tu habito</H1>
+    
+    <p class="texto">Hola, cordial saludo para todos y todas, espero podamos colavorar entre todos para mejorar la situacion de nuestro
+      planeta, entonces, esperamos que esten muy pendientes en los havances que estaremos posteando en esta pagina web.
+    </p>
+
+    <script src="script.js"></script>
+
+     <p class="titulo">Aqui esta nuestro proyecto escrito en el cual podemos elocar mas a detalle nuestro proyecto y avances.</p>
+
+    <a class="boton" href="file:///C:/Users/Equipo/Desktop/investicacion/Reciclaje%20En%20Casa%2015-09-2025+.pdf" target="_blank">archivo</a>
+  
+
+
+<!-- 🧾 CONTENIDO -->
+<section id="inicio">
+  
+<p class="texto">Este proyecto se hace en base a la problematica que se tiene en el sector de el entorno 
+        quibeño y a nivel bogotá. Pero para saber mejor esto, es necesario saber la situacion que tenemos donde
+         se precenta esta problematica</p>
+
+    <p class="texto">El reciclaje es un metodo que busca mejorar el reducir, reutilizar, teciclar, etc. 
+        Para intentar vajar los niveles de contaminacion que hay en el mundo actualmente.
+    este proces, lamentablementente no a sido el mas eficiente en cuanto a produccion y mejora
+ya este se ve afectado con la sobrepoblación, las compras impulsibas que generan mas desperdicios en la actualida.
+Especificamente en espacios como entornos hogareños, o escolares que son los entornos donde no se tiene mucho en cuenta estos,
+y que son los mas perjudiciales para en planeta tierra.    </p>
+
+     <h2 class="subtitulo">¿Por qué es necesario conocer el problema que estamos enfrentando como comunidad?</h2>
+
+     <p class="texto">En la actualidad, el reciclaje ha tenido avances, pero sigue siendo una práctica poco eficiente debido 
+     al crecimiento de la población y al aumento de las compras impulsivas, que generan grandes cantidades de residuos mal 
+     gestionados desde los hogares. Esta inadecuada separación de desechos ha provocado graves problemas de contaminación ambiental
+      y afectaciones a la salud humana. Según Flores Huamán y Cubas Rimachi (2023), “la contaminación no solo afecta al planeta, sino
+       que también nos afecta principalmente por enfermedades respiratorias, cardiovasculares e incluso cáncer”, derivadas de la 
+      contaminación del aire, tierra, agua y alimentos.</p>
+
+      <p class="texto">Además, el cambio climático agrava la situación. Sauchay et al. (2022), citados por Flores Huamán & Cubas Rimachi (2023),
+    encontraron que “el aumento de la temperatura ha incrementado las enfermedades respiratorias en un 14% y las cardiovasculares en un 
+    9%”, evidenciando el impacto directo del calentamiento global en la salud. Freire, Meneses y Cuesta (2021), también citados por Flores Huamán
+    & Cubas Rimachi (2023), afirman que “en Latinoamérica mueren alrededor de 7 millones de personas al año por contaminación” y advierten que,
+     para 2050, el deshielo del Ártico causará desastres naturales como inundaciones y tsunamis.p class="texto"></p>
+</section>
+
+<section id="definicion">
+  <h2>Definición</h2>
+  <p>El reciclaje es el proceso mediante el cual los materiales desechados se transforman en nuevos productos útiles.</p>
+</section>
+
+<section id="tipos">
+  <h2>Tipos de Reciclaje</h2>
+  <p>Existen varios tipos: mecánico, químico y energético. Cada uno permite aprovechar los recursos de manera diferente.</p>
+</section>
+
+<section id="beneficios">
+  <h2>Beneficios</h2>
+  <p>Reduce la contaminación, ahorra energía y contribuye al cuidado del medio ambiente.</p>
+</section>
+
+<section id="proceso">
+  <h2>Proceso del Reciclaje</h2>
+  <p>1. Recolección<br>2. Clasificación<br>3. Limpieza<br>4. Transformación en nuevos productos.</p>
+</section>
+
+<section id="importancia">
+  <h2>Importancia</h2>
+  <p>Reciclar ayuda a conservar los recursos naturales y a mantener limpio nuestro planeta.</p>
+</section>
+  <p>El reciclaje es una práctica esencial para un futuro sostenible. ¡Haz tu parte hoy!</p>
+</section>
+
+<section id="conclusion">
+  <h2>Conclusión</h2>
+  <p>El reciclaje es una práctica esencial para un futuro sostenible. ¡Haz tu parte hoy!</p>
+</section>
+
+
+</body>
+</html>
