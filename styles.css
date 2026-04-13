@@ -1,31 +1,37 @@
-*body {/*cuerpo de la pagina*/
-    
-      background-image: url(img/imagen-fondo.png) ; 
-      background-size: cover;
+body {/*cuerpo de la pagina*/
+      background-image: url(img/medioambiente.jpg) ; 
+      background-size: 1500px center;
+      background-position: justify;
+      background-repeat: no-repeat;
 
       margin: 0;
       padding: 0;
 
-      background-color: #b6b6b6; /* Fondo gris claro */
+
 
     }
- 
-    
-    header {
-      background-color: #ffffff;
-      padding: 20px 0;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+ /* 📄 Secciones */
+    section {
+      /*barra de movimiento*/
+      height: 1200px; /* Para que aparezca la barra de movimiento */
+      border-radius: 100px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/*secciones internas */
+      max-width:auto;
+      margin: 40px auto;
+      padding: 60px;
+      background:transparent; /* fondo suave para leer mejor */
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+    
+
 
     .contenedor {
       width: 800px; /* 👈 Ancho exacto de la página */
       max-width: 95%; /* Para móviles */
       margin: 40px auto; /* Centrado */
-      background-color: #ffffff;
+      background-color: transparent;
       padding: 40px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -33,9 +39,8 @@
       max-width: 850px;      /* ancho de la “página” */
       margin: 50px auto;     /* centrado + margen arriba/abajo */
       padding: 40px;         /* espacio interno alrededor del texto */
-      background-color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+
       
     }
 
@@ -43,13 +48,13 @@
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #ffffff;
+      background-color: white transparent 80%;
       box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
       margin-top: 50px;
     }
         
     /* Fondo semitransparente para dar efecto */
-     body:before {
+    body:before {
      content: "";
      position: fixed;
      top: 0;
@@ -58,10 +63,10 @@
      height: 10%;
      background-color: rgba(255, 255, 255, 0.493); /* Ajusta opacidad (0 = transparente, 1 = opaco) */
      z-index: -1;
-  }
+   }
 
-  /* Menú superior */
-  nav {
+    /* Menú superior */
+    nav {
      background-color: rgb(11, 97, 47);
      position: sticky;
      top: 0;
@@ -72,13 +77,13 @@
      display: flex;
      align-items: center;
 
-  }
+    }
 
-  .menu {
+   .menu {
      position: relative;
-  }
+    }
 
-.menu-btn {
+   .menu-btn {
      background-color: white;
      color: #27ae60;
      padding: 10px 20px;
@@ -87,20 +92,20 @@
      border-radius: 8px;
      cursor: pointer;
      transition: 0.3s;
-  }
+    }
 
-  .menu-btn:hover {
+    .menu-btn:hover {
      background-color: #27ae60;
      color: white;
-  }
+    }
 
-  /* 📜 Contenedor del menú desplegable */
-  .menu {
+    /* 📜 Contenedor del menú desplegable */
+    .menu {
      position: relative;
      display: inline-block;
-  }
+    }
 
-  .menu-content {
+   .menu-content {
      display: none;
      position: absolute;
      background-color: white;
@@ -151,21 +156,37 @@
       z-index: 1; /* Asegura que el texto quede encima */
       text-align: center;
     }
-    #inicio{font-family:'Times New Roman', Times, serif;;}
+    #inicio{
+      font-family:'Times New Roman', Times, serif;
+    }
 
-    #definicion{font-family:'Times New Roman', Times, serif;;}
+    #definicion{
+      font-family:'Times New Roman', Times, serif;
+    }
 
-    #tipos{font-family:'Times New Roman', Times, serif;}
+    #tipos{
+      font-family:'Times New Roman', Times, serif;
+    }
 
-    #beneficios{font-family:'Times New Roman', Times, serif;}
+    #beneficios{
+      font-family:'Times New Roman', Times, serif;
+    }
 
-    #proceso{font-family:'Times New Roman', Times, serif;}
+    #proceso{
+      font-family:'Times New Roman', Times, serif;
+    }
 
-    #importancia{font-family:'Times New Roman', Times, serif;}
+    #importancia{
+      font-family:'Times New Roman', Times, serif;
+    }
 
-    #conclusion{font-family:'Times New Roman', Times, serif;;} 
+    #conclusion{
+      font-family:'Times New Roman', Times, serif;
+    } 
 
-    #legal{font-family:'Times New Roman', Times, serif;}
+    #legal{
+      font-family:'Times New Roman', Times, serif;
+    }
 
 
 
@@ -232,10 +253,11 @@
      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     }
   
-.boton:hover {
+   .boton:hover {
      background: linear-gradient(135deg, #097c1c, #57e08c);
      box-shadow: 0 6px 15px rgba(90, 41, 41, 0.3);
-     transform: scale(1.05);}
+     transform: scale(1.05);
+    }
 
     .boton {
      background: linear-gradient(135deg, #097c1c, #57e08c);
