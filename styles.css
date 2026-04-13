@@ -1,17 +1,17 @@
 body {/*cuerpo de la pagina*/
-        margin: center;
-      background-image:url(/img/imagen-fondo.png) ; 
+    
+      background-image: url(/img/imagen-fondo.png) ; 
+      background-size: cover;
+
 
       margin: 0;
       padding: 0;
-      font-family: "Times New Roman", Times, serif;
-      margin: 0;
-      padding: 0;
+
+
       
-      font-family: "Times New Roman", Times, serif;
+
       background-color: #b6b6b6; /* Fondo gris claro */
-      margin: 0;
-      padding: 0;
+
 
     }
   /* 📄 Secciones */
