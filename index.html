@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +8,18 @@
 <link rel="stylesheet" href="styles.css">
 
 </head>
-<body>
+<body id="top">
 
 <nav>
   <div class="menu">
-    <button class="menu-btn">☰ Menú</button>
-    <div class="menu-content">
-      <a href="#inicio">Inicio</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-content">☰ Menú</button>
+    <div class="menu-content" id="menu-content">
+      <a href="#top">Inicio</a>
       <a href="#definicion">¿Qué ayuda</a>
       <a href="#tipos">¿Actividades?</a>
       <a href="#beneficios">Cucharas</a>
       <a href="#conclusion">Deja tu huella</a>
-      <a href="#legal">Legal</a>
+      <a href="#juegos">Juegos</a>
     </div>
   </div>
  <div class="titulo-barra">Reciclaje Institucional ♻️</div>
@@ -85,8 +85,9 @@ y que son los mas perjudiciales para en planeta tierra.    </p>
 
   </p>
  
-  <video class="niño" src="video/¿Qué es el fenómeno del Niño_(720P_HD).mp4" controls >
-    video del fenomeno del niño
+  <video class="niño" controls preload="metadata">
+    <source src="¿Qué es el fenómeno del Niño_(720P_HD).mp4" type="video/mp4">
+    Tu navegador no puede reproducir este video.
   </video>
   <p>
     situaciones como estas estan sucediendo por parte de nuestra impridencia y desperdicios de recursos que al cabo de un tiempo,
@@ -111,7 +112,7 @@ y que son los mas perjudiciales para en planeta tierra.    </p>
  
 
   <div class="juegos-canecas" id="juegos-canecas">
-    <article class="juego-reciclaje" data-rompecabezas data-imagen="img/caneca blanca.jpg">
+    <article class="juego-reciclaje" id="juego-blanca" data-rompecabezas data-imagen="img/caneca blanca.jpg">
       <h2>Rompecabezas: caneca blanca</h2>
       <p>Ordena las piezas para descubrir la caneca.</p>
       <div class="zona-rompecabezas">
@@ -132,7 +133,7 @@ y que son los mas perjudiciales para en planeta tierra.    </p>
       </aside>
     </article>
 
-    <article class="juego-reciclaje" data-rompecabezas data-imagen="img/caneca verde.jpg">
+    <article class="juego-reciclaje" id="juego-verde" data-rompecabezas data-imagen="img/caneca verde.jpg">
       <h2>Rompecabezas: caneca verde</h2>
       <p>Ordena las piezas para descubrir la caneca.</p>
       <div class="zona-rompecabezas">
@@ -153,7 +154,7 @@ y que son los mas perjudiciales para en planeta tierra.    </p>
       </aside>
     </article>
 
-    <article class="juego-reciclaje" data-rompecabezas data-imagen="img/caneca negra.webp">
+    <article class="juego-reciclaje" id="juego-negra" data-rompecabezas data-imagen="img/caneca negra.webp">
       <h2>Rompecabezas: caneca negra</h2>
       <p>Ordena las piezas para descubrir la caneca.</p>
       <div class="zona-rompecabezas">
@@ -190,10 +191,9 @@ y que son los mas perjudiciales para en planeta tierra.    </p>
    <h3>
     Marco Floral
    </h3>
-   <video 
-    controls>
-    <source  src="video\HnVideoEditor_2026_10_19_010106580.mp4" loop> 
-    video 1
+   <video controls loop preload="metadata">
+    <source src="HnVideoEditor_2026_10_19_010106580.mp4" type="video/mp4">
+    Tu navegador no puede reproducir este video.
    </video>
   </div>
   
@@ -201,7 +201,10 @@ y que son los mas perjudiciales para en planeta tierra.    </p>
    <h3>
     Mariquitas Bonitas
    </h3>
-   <video src="video/HnVideoEditor_2026_10_19_005940229.mp4" controls loop>video 2</video>
+   <video controls loop preload="metadata">
+    <source src="HnVideoEditor_2026_10_19_005940229.mp4" type="video/mp4">
+    Tu navegador no puede reproducir este video.
+   </video>
   </div>
 </div>
 <div class="relleno">
@@ -268,46 +271,213 @@ y que son los mas perjudiciales para en planeta tierra.    </p>
 
   </section>
 
-<section id="legal">
-  <h2>Legal</h2>
-  <p>La Reciweb es un tema muy importante que se encuentra bajo de las normas de los
-     siguientes decretos:
-     
-<br>Decreto 1381 de 2024: les da a los recicladores de oficio la exclusividad por 15 años
- en la parte del aprovechamiento de las basuras. Esto hace parte del plan “Basura Cero”.<br>
+<section id="juegos">
+ <h2>Zona de juegos</h2>
+ <p class="texto-panel-juegos">Elige un juego. Todos se ejecutan dentro de esta página.</p>
+ <div class="panel-juegos">
+   <article class="tarjeta-juego">
+     <h3>Caneca blanca</h3>
+     <p>Ordena las piezas y descubre qué residuos se pueden aprovechar.</p>
+     <a class="boton" href="#juego-blanca">Jugar</a>
+   </article>
+   <article class="tarjeta-juego">
+     <h3>Caneca verde</h3>
+     <p>Completa el rompecabezas de los residuos orgánicos.</p>
+     <a class="boton" href="#juego-verde">Jugar</a>
+   </article>
+   <article class="tarjeta-juego">
+     <h3>Caneca negra</h3>
+     <p>Arma la imagen y aprende qué residuos no son aprovechables.</p>
+     <a class="boton" href="#juego-negra">Jugar</a>
+   </article>
+   <article class="tarjeta-juego">
+     <h3>El rinconsito</h3>
+     <p>Arrastra cada residuo al tacho correcto antes de que termine el tiempo.</p>
+     <button class="boton eco-game-open" type="button">Jugar</button>
+   </article>
+   <article class="tarjeta-juego">
+     <h3>Concentrese de reciclaje</h3>
+     <p>Encuentra las parejas de residuos y sus contenedores correspondientes en tres niveles.</p>
+     <button class="boton memory-game-open" type="button">Jugar</button>
+   </article>
+   <article class="tarjeta-juego">
+     <h3>Recicla lo que conoces</h3>
+     <p>Clasifica tantos residuos como puedas y consigue puntos en un minuto.</p>
+     <button class="boton eco-lanza-open" type="button">Jugar</button>
+   </article>
+ </div>
 
-<br>Decreto 670 de 2025: busca que se usen menos plásticos de un solo uso y que el país
- empiece a trabajar más en economía circular, es decir, reutilizar y reciclar mejor.</br>
+ <div id="eco-game-panel" class="eco-game-panel hidden">
+   <div class="eco-game-panel-heading">
+     <h2>El rinconsito</h2>
+     <button class="eco-game-back" type="button">Volver a los juegos</button>
+   </div>
+   <div class="game-container-wrapper">
+     <div class="game-app">
+       <header class="game-header">
+         <div class="stat-box">
+           <span class="stat-label">PUNTOS</span>
+           <span id="score" class="stat-value">0</span>
+         </div>
+         <div class="stat-box">
+           <span class="stat-label">TIEMPO</span>
+           <span id="timer" class="stat-value warning">60s</span>
+         </div>
+         <div class="stat-box">
+           <span class="stat-label">NIVEL</span>
+           <span id="speed-level" class="stat-value level-tag">1.0x</span>
+         </div>
+         <div class="stat-box">
+           <span class="stat-label">RÉCORD</span>
+           <span id="high-score" class="stat-value">0</span>
+         </div>
+       </header>
 
-<br>Decreto 2192 de 2023: también se enfoca en reducir los plásticos de un solo uso, 
-sobre todo en lugares naturales y protegidos.</br>
+       <main id="game-area" class="game-area">
+         <div id="start-screen" class="overlay-screen active">
+           <h1 class="game-title">El rinconsito</h1>
+           <p class="game-desc">Clasifica los residuos en el tacho correcto antes de que toquen el suelo. Cada cierto tiempo el ritmo aumenta un poco. ¡Busca la cuchara dorada!</p>
+           <button id="start-btn" class="btn btn-primary" type="button">¡EMPEZAR A JUGAR!</button>
+         </div>
 
-<br>Resolución 2184 de 2019: aunque no es un decreto, es clave porque puso el
- código de colores de las bolsas (blanco, negro y verde) para separar los residuos en todo el país.</br>
+         <div id="combo-badge" class="combo-badge hidden">COMBO x2!</div>
 
-<br>Además, la Corte Constitucional reconoció a los recicladores como población que debe recibir
- apoyo especial, por lo que se les asegura acceso al material reciclable y se crearon las ECAS
-  (Estaciones de Clasificación y Aprovechamiento)</br></p>
+         <div id="game-over-screen" class="overlay-screen hidden">
+           <h2 class="title-lg">¡TIEMPO AGOTADO! ⏱️</h2>
+           <div class="final-score-container">
+             <p class="final-score-label">Puntaje final</p>
+             <div id="new-record-tag" class="new-record-tag hidden">🏆 ¡NUEVO RÉCORD!</div>
+             <div id="final-score" class="final-score-val">0</div>
+           </div>
+           <div class="game-stats-grid">
+             <div class="mini-stat">
+               <span id="stat-accuracy" class="mini-stat-val">0%</span>
+               <span class="mini-stat-lbl">Precisión</span>
+             </div>
+             <div class="mini-stat">
+               <span id="stat-max-combo" class="mini-stat-val">0x</span>
+               <span class="mini-stat-lbl">Combo máximo</span>
+             </div>
+           </div>
+           <button id="restart-btn" class="btn btn-primary" type="button">JUGAR DE NUEVO 🔄</button>
+         </div>
+       </main>
 
-<p>Uso de páginas web y servicios digitales
- decretos que hablan sobre el uso de páginas web y servicios digitales:
+       <footer class="bin-zones">
+         <button class="bin-btn bin-organic" type="button" data-category="organico">
+           <span class="bin-icon">🍂</span>
+           <span class="bin-title">ORGÁNICO</span>
+           <span class="bin-sub">Cáscaras, té, comida</span>
+         </button>
+         <button class="bin-btn bin-recyclable" type="button" data-category="reciclaje">
+           <span class="bin-icon">♻️</span>
+           <span class="bin-title">RECICLAJE</span>
+           <span class="bin-sub">Plástico, latas, papel, metal</span>
+         </button>
+         <button class="bin-btn bin-trash" type="button" data-category="basura">
+           <span class="bin-icon">🗑️</span>
+           <span class="bin-title">NO RECICLABLE</span>
+           <span class="bin-sub">Bolsas, icopor, foami</span>
+         </button>
+       </footer>
+     </div>
+   </div>
+ </div>
 
-<br>Decreto 1413 de 2017: obliga a que las entidades públicas usen servicios digitales como
- la carpeta ciudadana o la autenticación en línea.</br>
+ <div id="memory-game-panel" class="eco-game-panel memory-game-panel hidden">
+   <div class="eco-game-panel-heading">
+     <h2>Concentrese de reciclaje</h2>
+     <button class="eco-game-back memory-game-back" type="button">Volver a los juegos</button>
+   </div>
 
-<br>Decreto 767 de 2022: habla de Gobierno Digital. Lo que busca es que las entidades del
- Estado usen mejor la tecnología para trámites, datos abiertos, seguridad y
-  accesibilidad en sus páginas.</br>
+   <div id="classic-memory-section" class="classic-memory-wrapper">
+     <div class="classic-memory-card">
+       <h2 class="game-main-title">🌱 Concentrese de Reciclaje 🌱</h2>
+       <p class="game-subtitle">Encuentra las parejas de residuos y sus contenedores correspondientes</p>
 
-<br>Resolución 1519 de 2020: fija las reglas para que las páginas web de las entidades
- tengan accesibilidad, publiquen información clara y manejen datos abiertos.</br>
+       <div class="level-selector-bar" aria-label="Selector de niveles">
+         <button class="level-btn active" type="button" data-level="1" aria-pressed="true">Nivel 1 (Fácil)</button>
+         <button class="level-btn" type="button" data-level="2" aria-pressed="false">Nivel 2 (Medio)</button>
+         <button class="level-btn" type="button" data-level="3" aria-pressed="false">Nivel 3 (Difícil)</button>
+       </div>
 
-<br>Resoluciones 2238 y 2239 de 2024: tratan de la política de privacidad y el manejo
- de los datos de las personas en las páginas web del Estado.</br>
+       <div class="game-status-bar" aria-live="polite">
+         <div class="status-item">Movimientos: <span id="moves-count">0</span></div>
+         <div class="status-item">Parejas: <span id="matches-count">0 / 4</span></div>
+         <button id="reset-game-btn" class="action-reset-btn" type="button">🔄 Reiniciar</button>
+       </div>
 
-<br>Decreto 1079 de 2023: regula el servicio de Internet comunitario fijo, dando 
-reglas sobre calidad y protección para los usuarios.</br>
- </p>
+       <div id="memory-cards-grid" class="cards-grid grid-level-1" aria-label="Cartas del juego"></div>
+
+       <div id="win-message-banner" class="win-banner hidden" role="status">
+         <h3>🎉 ¡Felicidades! Completaste el nivel</h3>
+         <p>Lo lograste en <span id="final-moves-txt">0</span> movimientos.</p>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <div id="eco-lanza-panel" class="eco-game-panel slingshot-panel hidden">
+   <div class="eco-game-panel-heading">
+     <h2>Recicla lo que conoces</h2>
+     <button class="eco-game-back eco-lanza-back" type="button">Volver a los juegos</button>
+   </div>
+
+   <div class="slingshot-game-wrapper">
+     <div class="slingshot-app">
+       <header class="slingshot-header">
+         <div class="stat-box">
+           <span class="stat-label">PUNTOS</span>
+           <span id="sling-score" class="stat-value">0</span>
+         </div>
+         <div class="stat-box">
+           <span class="stat-label">TIEMPO</span>
+           <span id="sling-timer" class="stat-value" role="timer" aria-live="off">60 s</span>
+         </div>
+         <div class="stat-box">
+           <span class="stat-label">ERRORES</span>
+           <span id="sling-errors" class="stat-value">0</span>
+         </div>
+         <button id="sling-reset-btn" class="action-reset-btn" type="button">🔄 Reiniciar</button>
+       </header>
+
+       <div id="item-info-bar" class="item-info-bar" aria-live="polite">
+         <span id="sling-feedback">Arrastra el residuo hacia atrás y suéltalo para lanzarlo.</span>
+         <b id="current-item-name">Cargando...</b>
+       </div>
+
+       <div id="slingshot-canvas-area" class="slingshot-canvas-area" aria-label="Área para lanzar residuos al contenedor correspondiente">
+         <div id="slingshot-base" class="slingshot-base" aria-hidden="true">
+           <div id="slingshot-pocket" class="slingshot-pocket" role="button" tabindex="0" aria-label="Arrastra para lanzar el residuo">
+             <span id="projectile-emoji">🍾</span>
+           </div>
+         </div>
+
+         <div class="target-bins-container" aria-label="Contenedores objetivo">
+           <div class="target-bin bin-org" data-category="organico">
+             <span class="bin-emoji">🍂</span>
+             <span class="bin-label">ORGÁNICO</span>
+           </div>
+           <div class="target-bin bin-rec" data-category="reciclaje">
+             <span class="bin-emoji">♻️</span>
+             <span class="bin-label">RECICLAJE</span>
+           </div>
+           <div class="target-bin bin-tra" data-category="basura">
+             <span class="bin-emoji">🗑️</span>
+             <span class="bin-label">BASURA</span>
+           </div>
+         </div>
+       </div>
+
+       <div id="sling-win-banner" class="win-banner hidden" role="status">
+         <h3>¡Se acabó el tiempo!</h3>
+         <p>Tu puntaje final fue <b id="final-sling-score">0</b> puntos.</p>
+         <p>Residuos correctos: <b id="final-sling-correct">0</b></p>
+         <button id="sling-play-again-btn" class="slingshot-play-again" type="button">Jugar de nuevo</button>
+       </div>
+     </div>
+   </div>
+ </div>
 </section>
 
 <div class="cta-juego">
